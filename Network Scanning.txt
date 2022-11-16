@@ -1,0 +1,87 @@
+Network Scanning:
+13.235.70.6
+13.38.131.186
+35.179.74.132
+-------------------------------------------
+Network Scanning Objects:
+
+- Collect Service information 
+- Collect Operating Systems Versions
+- Collect Vulnarabilities 
+
+ System Scanning Tools:
+  - NMAP tool
+
+  Network Services :
+   - HTTP Service ===> Port No HTTP = 80    HTTPS= 443
+   - HTTP Service ===> Port No HTTP = 80    HTTPS= 443
+     Level           Description       Src Device    Dest Device          
+   Physical          onnection ==>     Src MAC        DST MAC    
+   Logical            IPv4 or IPv6     src IP         Dst: IP
+   Service
+  Ports 65535   Main Services 0 ==> 1023 :::  Manage Service   1024 ==> 49151   SQL 1433 1444
+                Dynamic Range 49152 ==> 65535  
+ source Services                                        Destination
+    MY PC                                               Microsoft website
+  Physical Level
+    Src MAC 48-A4-72-56-2E-CB                            Gateway MAC Addr
+  Logical
+   rsc IP   MYPC IP                                      Microsoft Server IP
+   Service
+   HTTP ==> 80                                           List 80 
+   Generate Port Src  50500 ===============>         
+   ===========================================================================
+   TCP                                         UDP                     ICMP
+
+
+
+ICMP ===> retrive echo info 
+TCP  ===> Send and reveive Network Trafic (Data)
+UDP  ===> Send and reveive Network Trafic (Data)
+
+=======================================================
+TCP Connection Oriented 
+UDP Connectionless
+
+Video and Audio Stream Transferd using UDP protocl
+DNS =====> UDP 
+==========================================================
+TCP Connection Oriented
+Src: 192.168.1.123 
+Dst:95.101.197.129
+----------------------------------------------------------
+HTTP   transfer data over TCP
+Connection Processing Over TCP:
+Phase 1:
+      - Three way handshake                         srcPort:80 DstPort:17190 Flag: SYN
+                        Src: 192.168.1.123  ================================================> Dst:95.101.197.129
+                                                srcPort:80 DstPort:17190 Flag: SYN/ACK
+                        Src: 192.168.1.123  <================================================ Dst:95.101.197.129  
+                                                srcPort:80 DstPort:17190 Flag: ACK
+                        Src: 192.168.1.123  ================================================> Dst:95.101.197.129
+Note:
+    - Three way handshake           srcPort:80 DstPort:17190 Flag: SYN
+                        Src: 192.168.1.123  ================================================> Dst:95.101.197.129
+                                 srcPort:80 DstPort:17190 Flag: RST
+                        Src: 192.168.1.123  <================================================ Dst:95.101.197.129  
+     ==============================================================================================================
+              
+      - Transfer Data(PSH): 
+                                            srcPort:80 DstPort:17190 Flag: PSH/ACK
+                    Src: 192.168.1.123  <================================================ Dst:95.101.197.129  
+                                            srcPort:80 DstPort:17190 Flag: PSH/ACK
+                    Src: 192.168.1.123  <================================================ Dst:95.101.197.129 
+
+
+  Phase 3:
+      - Finish Request    to check destinition recieved all data 
+
+          - Fore  way handshake    
+                                                srcPort:80 DstPort:17190 Flag: FIN/ACK
+                        Src: 192.168.1.123  ================================================> Dst:95.101.197.129
+                                                srcPort:80 DstPort:17190 Flag: ACK
+                        Src: 192.168.1.123  <================================================ Dst:95.101.197.129  
+                                                srcPort:80 DstPort:17190 Flag: FIN/ACK
+                        Src: 192.168.1.123  <================================================ Dst:95.101.197.129
+                                        srcPort:80 DstPort:17190 Flag: ACK
+                        Src: 192.168.1.123  ================================================> Dst:95.101.197.129

@@ -1,0 +1,112 @@
+Reconnaissance & Information Gothering 
+======================================
+  - Passive 
+  - Active 
+
+
+  =====================================
+  Passive  ==> Web & Linux Parrot Or Kali 
+  ----------------------------------------
+  Tools:
+  - Whois tool  (Kali or parrot)
+  - nslookup   to view DNs Records (windows & Linux)
+  -  dig       to view DNS Records (Linux)   ==> dig gmail.com CNAME
+
+
+  Whois tool:
+  ==> whois facebook.com   or using who.is website
+
+  DNS ==> Servers   
+        IP Address    ==> DNS ==> Resolve Name to IP Address
+
+        Facebook.com Name Servers
+Name Servers
+A.NS.FACEBOOK.COM
+129.134.30.12
+B.NS.FACEBOOK.COM
+129.134.31.12
+C.NS.FACEBOOK.COM
+185.89.218.12
+D.NS.FACEBOOK.COM
+185.89.219.12
+====================================================
+www.facebook.com  ==> Web Server IP
+domain@fb.com ===> Mail Servers
+---------------------------------------------------
+DNS Records
+---------------------------------------------------
+A Record  ::::> 
+A Record 185.89.219.12   D.NS.FACEBOOK.COM
+A Record 157.240.196.35  edge-star-mini-shv-02-mrs2.facebook.com
+AAAA Record
+AAAA Record 2001::10    D.NS.FACEBOOK.COM
+MX Record (Main Exchanger) using with mail Servers
+MX       185.89.219.20       Mail.fb.com
+CNAME Record     www        157.240.196.35
+
+www.facebook.com      
+====================================================
+HibaTech   ===> HibaTech.com
+=====================================================
+Search DNS Records
+-------------------------------------------------------
+=======================================================
+ Active  Reconnaissance
+ =======================================================
+
+
+ PING 
+ traceroute OR Windows tracert
+PING www.microsoft.COM 
+-  to check connetivity 
+- to check maximmum buffer size
+- to check maximmum TTL 
+
+ CNAME Record DNS   e13678.dscb.akamaiedge.net   95.101.197.129
+
+ ping -4  www.microsoft.com
+Pinging e13678.dscb.akamaiedge.net [95.101.197.129] with 32 bytes of data:
+Reply from 95.101.197.129: bytes=32 time=76ms TTL=52
+Reply from 95.101.197.129: bytes=32 time=76ms TTL=52
+Reply from 95.101.197.129: bytes=32 time=67ms TTL=52
+Reply from 95.101.197.129: bytes=32 time=71ms TTL=52
+
+Ping statistics for 95.101.197.129:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 67ms, Maximum = 76ms, Average = 72ms
+-------------------------------------------------------------------------
+    ping 10.10.10.10
+
+Pinging 10.10.10.10 with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 10.10.10.10:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+Windows:
+ping /?
+Linux:
+ping --help or -h
+
+ping -l 8000 -4 www.microsoft.com to check allowed buffer size
+ping -4 -i 10 to change TTL Value
+Manage TTL ==> Time To Live:
+ping -4 -i 10 www.microsoft.com
+
+Pinging e13678.dscb.akamaiedge.net [95.101.197.129] with 32 bytes of data:
+Reply from 62.115.148.161: TTL expired in transit.
+Reply from 62.115.148.161: TTL expired in transit.
+Reply from 62.115.148.161: TTL expired in transit.
+Reply from 62.115.148.161: TTL expired in transit.
+
+Ping statistics for 95.101.197.129:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+
+linux 
+ping -4 www.microsoft.com 
+
+==================================
+
